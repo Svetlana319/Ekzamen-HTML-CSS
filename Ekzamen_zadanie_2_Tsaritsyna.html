@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zadanie_2</title>
+
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  text-align: center;
+}
+
+.list ul {
+  position: relative;
+  display: table;
+  margin: 28px 0 0 0 ;
+  padding: 5px 0 0 0 ;
+  text-align: center;
+}
+.list li {
+  position: relative;
+  display: table-cell;
+}
+
+.list li {
+  padding: 15px;
+}
+
+.list li:last-child {
+  padding-right: 0;
+}
+
+.list li:first-child {
+  padding-left: 0;
+
+}
+
+
+.list ul:before,
+.list ul li:before,
+.list ul li:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 50%;
+  height: 25px;
+  border-right: 1px solid #999;
+}
+
+.list ul:before {
+  top: -29px;
+}
+
+.list ul li:not(:only-child):before {
+  border-top: 1px solid #999;
+  border-radius: 3px;
+}
+
+.list ul li:not(:only-child):first-child:before {
+  right: 0;
+  left: auto;
+  border-left: 1px solid #999;
+  border-right: none;
+}
+
+.list ul li:not(:only-child):first-child:before,
+.list ul li:not(:only-child):last-child:before {
+  width: 51%;
+}
+
+.list ul li:after {
+  border: none;
+}
+
+.list ul li:not(:last-child):not(:first-child):after {
+  width: 100%;
+  border-top: 1px solid #999;
+}
+
+button {
+  background: white;
+  padding: 8px;
+  border: solid 1px #999;
+  border-radius: 4px;
+}
+
+ul button:hover {
+  background-color: #bde5f9;
+}
+
+ul button:hover + ul button {
+  background-color: #bde5f9;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+  <ul class="list">
+    <li><button>Parent</button>
+      <ul>
+        <li><button>Child</button>
+          <ul>
+            <li><button>Grand Child</button>
+          </ul>
+        <li><button>Child</button>
+          <ul>
+            <li><button>Grand Child</button>
+            <li><button>Grand Child</button>
+              <ul>
+                <li><button>Creat Grand Child</button>
+                <li><button>Creat Grand Child</button>
+                <li><button>Creat Grand Child</button>
+                </ul>
+            <li><button>Grand Child</button>
+      </ul>
+  </ul>
+
+
+
+
+</body>
+</html>
